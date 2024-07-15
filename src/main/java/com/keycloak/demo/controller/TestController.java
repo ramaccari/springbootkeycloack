@@ -10,13 +10,13 @@ public class TestController {
 	@GetMapping("/Hello-1")
 	@PreAuthorize("hasRole('admin_client_role')")
 	public String helloAdmin() {
-		return "Hello Spring Boot with Keycloack - ADMIN";
+		return "Hello Spring Boot with Keycloak - ADMIN";
 	}
 
 	@GetMapping("/Hello-2")
 	@PreAuthorize("hasRole('admin_client_role') or hasRole('user_client_role')")
 	public String helloUser() {
-		return "Hello Spring Boot with Keycloack - USER";
+		return "Hello Spring Boot with Keycloak - USER";
 	}
 
 }
